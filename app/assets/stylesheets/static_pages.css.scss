@@ -11,6 +11,8 @@ body {
 .jumbotron  {
   height: 100vh;
   background-image: url('test_2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
   text-align: center;
 }
 
