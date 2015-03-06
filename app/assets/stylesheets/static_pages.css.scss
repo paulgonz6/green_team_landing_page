@@ -13,6 +13,10 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
+
+  p {
+    font-weight: 400;
+  }
 }
 
 .form {
@@ -33,4 +37,10 @@ body {
   text-transform: uppercase;
   font-weight: 600;
   box-shadow: 0 1px 3px rgba(0,0,0,.125);
+}
+
+.coupon-box {
+  border: 4px dashed black;
+  padding: 50px;
+
 }
