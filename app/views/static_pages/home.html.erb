@@ -1,11 +1,9 @@
-
 <%= render 'static_pages/jumbotron' %>
 
 <div class="container">
-
   <div class="row home-content">
     <div class="col-xs-12 col-md-6 col-md-offset-3 text-justify">
-      <h2 id="about">About Us</h2>
+      <h3 id="about">About Us</h3>
       <p>
         Green Team Landscaping delivers unparalleled customer service to the residents and businesses of Delaware County and Chester County. The Green Team draws on 12 years of industry experience and is reshaping the way you think about landscaping.
       </p>
@@ -15,7 +13,7 @@
 
   <div class="row home-content">
     <div class="col-xs-12 col-md-6 col-md-offset-3 text-justify">
-      <h2 id="about">Testimonials</h2>
+      <h3 id="about">Customer Reviews</h3>
       <blockquote>
         “I have used Green Team Landscaping (or the prior same-owned company) since 2008, for both my private residence and investment property. I have been extremely pleased. They are prompt, polite, meticulous, honest and reasonably priced. It would be hard to do better!” – Marsha R., Wallingford
       </blockquote>
@@ -34,7 +32,7 @@
 
   <div class="row home-content">
     <div class="col-xs-12 col-md-6 col-md-offset-3 text-justify">
-      <h2 id="services">Services</h2>
+      <h3 id="services">Services</h3>
       <p>Here are our most popular services. Do you need something not listed? No worries, we do it all. Just contact us and ask.</p>
 
       <div class="well text-left" id="fullServiceButton">
@@ -44,8 +42,22 @@
           <%= image_tag 'full_service.jpg', class: 'img-responsive' %>
         </div>
       </div>
-      <div class="well text-left">LAWN MAINTENANCE</div>
-      <div class="well text-left">FERTILIZING, SEEDING AND AERATING</div>
+
+      <div class="well text-left" id="lawnMaintenanceButton">
+        LAWN MAINTENANCE
+        <div id="lawnMaintenance" style="display: none;">
+          <hr/>
+          <%= image_tag 'lawn_maintenance.jpg', class: 'img-responsive' %>
+        </div>
+      </div>
+
+      <div class="well text-left" id="fertilizerButton">
+        FERTILIZING, SEEDING AND AERATING
+        <div id="fertilizer" style="display: none;">
+          <hr/>
+          <%= image_tag 'fertilizer.jpg', class: 'img-responsive' %>
+        </div>
+      </div>
       <div class="well text-left">FLOWER BED INSTALLATION & DESIGN</div>
       <div class="well text-left">MULCHING</div>
       <div class="well text-left">PLANTING</div>
@@ -57,7 +69,7 @@
 
   <div class="row home-content">
     <div class="col-xs-12 col-md-6 col-md-offset-3 text-justify">
-      <h2 id="whyus">Why Us?</h2>
+      <h3 id="whyus">Why Us?</h3>
       <p>
         Life is hectic, you're busy, we get it. That's why we want to help make your life a little bit easier. You pay for just about everything else online, why not your landscaping too? We are the first completely paperless invoicing landscaping team in Delaware County. We'll invoice you the day a service is provided. All you need to do is open your email and click "Pay Now” and a confirmation email will be sent instantly. Just to be sure we'll send you a monthly statement too so you can review your activity.
       </p>
@@ -67,7 +79,7 @@
 
   <div class="row home-content">
     <div class="col-xs-12 col-md-6 col-md-offset-3 text-justify">
-      <h2 id="team">The Team</h2>
+      <h3 id="team">The Team</h3>
       <p>
         Brian and Chris, both graduates of Strath Haven High School, formed a small landscaping company in 9th grade. They worked together until parting ways after graduation.  10 years later they teamed up again to pioneer a new kind of landscaping company, a professional enterprise that emphasizes customer service above all else.  The Green Team still delivers outstanding quality but it’s a happy customer that we strive for.
       </p>
@@ -75,17 +87,13 @@
       <div class="row">
         <div class="col-xs-6 col-xs-offset-3 col-md-4 col-md-offset-1 text-center">
           <%= image_tag 'brian.JPG', :class => "img-responsive img-circle" %>
-
           <h5><strong>Brian</strong></h5>
           <h5><small>Business Development, Customer Service</small></h5>
-
         </div>
         <div class="col-xs-6 col-xs-offset-3 col-md-4 col-md-offset-2 text-center">
           <%= image_tag 'Chris.jpg', :class => "img-responsive img-circle" %>
-
           <h5><strong>Chris</strong></h5>
           <h5><small> Industry Specialist, Customer Service</small></h5>
-
         </div>
       </div>
     </div>
@@ -99,6 +107,15 @@ $(document).ready(function() {
   $('#fullServiceButton').on('click', function() {
     $('#fullService').slideToggle();
   })
+
+  $('#lawnMaintenanceButton').on('click', function() {
+    $('#lawnMaintenance').slideToggle();
+  })
+
+  $('#fertilizerButton').on('click', function() {
+    $('#fertilizer').slideToggle();
+  })
+
 });
 
 </script>
