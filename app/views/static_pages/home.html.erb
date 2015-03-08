@@ -58,11 +58,43 @@
           <%= image_tag 'fertilizer.jpg', class: 'img-responsive' %>
         </div>
       </div>
-      <div class="well text-left">FLOWER BED INSTALLATION & DESIGN</div>
-      <div class="well text-left">MULCHING</div>
-      <div class="well text-left">PLANTING</div>
-      <div class="well text-left">SPRING AND FALL CLEAN-UPS</div>
-      <div class="well text-left">HARDSCAPES, PATIOS AND RETAINING WALLS</div>
+
+      <div class="well text-left" id="flowerBedButton">
+        FLOWER BED INSTALLATION & DESIGN
+        <div id="flowerBed" style="display: none;">
+          <hr/>
+          <%= image_tag 'flower_bed.jpg', class: 'img-responsive' %>
+        </div>
+      </div>
+
+      <div class="well text-left" id="mulchingButton">
+        MULCHING
+        <div id="mulching" style="display: none;">
+          <hr/>
+          <%= image_tag 'mulching.jpg', class: 'img-responsive' %>
+        </div>
+      </div>
+
+      <div class="well text-left" id="plantingButton">
+        Planting
+        <div id="planting" style="display: none;">
+          <hr/>
+          <%= image_tag 'planting.jpg', class: 'img-responsive' %>
+        </div>
+      </div>
+
+      <div class="well text-left">
+        SPRING AND FALL CLEAN-UPS
+      </div>
+
+      <div class="well text-left" id="hardscapeButton">
+        HARDSCAPES, PATIOS AND RETAINING WALLS
+        <div id="hardscape" style="display: none;">
+          <hr/>
+          <%= image_tag 'hardscape.jpg', class: 'img-responsive' %>
+        </div>
+      </div>
+
     </div>
   </div>
   <hr/>
@@ -85,12 +117,12 @@
       </p>
       <br>
       <div class="row">
-        <div class="col-xs-6 col-xs-offset-3 col-md-4 col-md-offset-1 text-center">
+        <div class="col-xs-8 col-xs-offset-2 col-md-4 col-md-offset-1 text-center">
           <%= image_tag 'brian.JPG', :class => "img-responsive img-circle" %>
           <h5><strong>Brian</strong></h5>
           <h5><small>Business Development, Customer Service</small></h5>
         </div>
-        <div class="col-xs-6 col-xs-offset-3 col-md-4 col-md-offset-2 text-center">
+        <div class="col-xs-8 col-xs-offset-2 col-md-4 col-md-offset-2 text-center">
           <%= image_tag 'Chris.jpg', :class => "img-responsive img-circle" %>
           <h5><strong>Chris</strong></h5>
           <h5><small> Industry Specialist, Customer Service</small></h5>
@@ -114,6 +146,22 @@ $(document).ready(function() {
 
   $('#fertilizerButton').on('click', function() {
     $('#fertilizer').slideToggle();
+  })
+
+  $('#flowerBedButton').on('click', function() {
+    $('#flowerBed').slideToggle();
+  })
+
+  $('#mulchingButton').on('click', function() {
+    $('#mulching').slideToggle();
+  })
+
+  $('#plantingButton').on('click', function() {
+    $('#planting').slideToggle();
+  })
+
+  $('#hardscapeButton').on('click', function() {
+    $('#hardscape').slideToggle();
   })
 
 });
